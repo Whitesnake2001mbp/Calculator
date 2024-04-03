@@ -105,11 +105,8 @@ class Button(ttk.Button):
                 equation.set(equation.get() + self.digit)
                 simplified_equation.set(simplified_equation.get()+ self.digit)
         except Exception as e:
-            equation.set("Error! Not Valid!")
-            simplified_equation.set("Error! Not Valid!")
-
-current_input = tk.StringVar()
-current_input.set("0")
+            equation.set("ERROR")
+            simplified_equation.set("ERROR")
 
 btn_exp = Button(window, digit="EXP")
 btn_exp.grid(row=1, column=1, padx=5, pady=5)
